@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  rabbitmq:
+    host: 101.101.218.57
+    post: 5672
+    username: root
+    password: joyjoy1886*
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/sujin0970/spring-cloud-config.git
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
+
